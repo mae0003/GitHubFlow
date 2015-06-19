@@ -2,6 +2,10 @@ package jp.devmen.spellchecker.model;
 
 import java.util.List;
 
+/**
+ * 検査結果クラスです。
+ *
+ */
 public class CheckResult implements ICheckResult {
 
 	/**

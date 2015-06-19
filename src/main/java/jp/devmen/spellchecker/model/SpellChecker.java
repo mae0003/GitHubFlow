@@ -20,6 +20,9 @@ public class SpellChecker implements ISpellChecker {
 	private static SpellChecker spellChecker = new SpellChecker();
 	private static JLanguageTool langTool = new JLanguageTool(new BritishEnglish());
 
+	/**
+	 * コンストラクタ シングルトンのためプライベートにしています。
+	 */
 	private SpellChecker() {
 	}
 
@@ -43,8 +46,12 @@ public class SpellChecker implements ISpellChecker {
 			e.printStackTrace();
 		}
 
-		// matchs の長さが 0 であれば検査は正常です
-		// 単語が不正であれば matchs の最初の要素の getSuggestedReplacements() で修正候補が取得できます。
+		// ↓ ここから実装
+
+		// matchs の要素が 0 であれば検査は正常です
+
+		// 検査不正であれば matchs の最初の要素(.get(0))の getSuggestedReplacements()
+		// で修正候補が取得できます。
 		// see. http://wiki.languagetool.org/java-api
 
 		return null;

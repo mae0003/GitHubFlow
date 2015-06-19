@@ -14,38 +14,48 @@ public class WordDictionary implements IWordDictionary {
 
 	private static WordDictionary wordDictionary = new WordDictionary();
 
+	/**
+	 * シングルトンのためコンストラクタをプライベートにします。
+	 */
 	private WordDictionary() {
 	}
 
+	/**
+	 * 単語帳クラスを取得します。
+	 * 
+	 * @return 単語帳クラス
+	 */
 	public static IWordDictionary getInstance() {
 		return wordDictionary;
 	}
 
-	/*
-	 * (非 Javadoc)
+	/**
+	 * 単語が登録されているかどうかを返します。
 	 * 
-	 * @see
-	 * jp.devmen.spellchecker.model.IWordDictionary#containts(java.lang.String)
+	 * @param word
+	 *            検査対象の単語
+	 * @return 単語が登録されている場合 true
 	 */
 	@Override
 	public boolean containts(String word) {
+		// 実装してください
 		return false;
 	}
 
-	/*
-	 * (非 Javadoc)
+	/**
+	 * 単語を単語のリストに追加します。
 	 * 
-	 * @see
-	 * jp.devmen.spellchecker.model.IWordDictionary#addWord(java.lang.String)
+	 * @param word
+	 *            追加する単語
 	 */
 	@Override
 	public void addWord(String word) {
 	}
 
-	/*
-	 * (非 Javadoc)
+	/**
+	 * 辞書に登録されているすべての単語を取得します。
 	 * 
-	 * @see jp.devmen.spellchecker.model.IWordDictionary#getAllWord()
+	 * @return 単語のリスト
 	 */
 	@Override
 	public List<String> getAllWord() {
